@@ -1,0 +1,31 @@
+//tạo mới user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "age": 30
+}
+###
+//lấy tất cả user
+GET http://localhost:3001/api/users
+###
+//lấy user theo id
+GET http://localhost:3001/api/users/6a6b3fafe525689fe215111f
+###
+//cập nhật user theo id
+PUT http://localhost:3001/api/users/6a6b3fafe525689fe215111f
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane.doe@example.com",
+  "age": 25
+}
+###
+//xóa user theo id  
+DELETE http://localhost:3001/api/users/6a6b3fafe525689fe215111f
+###
+//lấy tất cả user theo query params
+GET http://localhost:3001/api/users?name=John&age=30
