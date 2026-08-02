@@ -1,8 +1,4 @@
 import swaggerJsdoc from "swagger-jsdoc";
-import dotenv from "dotenv";
-
-dotenv.config();
-const API_URL = process.env.API_URL || "http://localhost:3001";
 
 const swaggerDefinition = {
   openapi: "3.0.3",
@@ -14,8 +10,8 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: API_URL,
-      description: "Local development server",
+      url: "/",
+      description: "Same origin as the Swagger UI",
     },
   ],
   tags: [
